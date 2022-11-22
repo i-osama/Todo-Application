@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ActivityBackColor"
+    tools:context=".AddNewTask">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/theme_color"
+                android:hint="Title"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="#3DB3E8">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="Priority"
+                android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/txt_color" />
+            <RadioGroup
+                android:id="@+id/taskImportanceRadioGroup"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/taskNormalRBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/allerta"
+                    android:layout_marginEnd="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/taskMediumRBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medium"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/allerta"
+                    android:layout_marginEnd="8dp" />
+                <RadioButton
+                    android:id="@+id/taskImportantRBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Important"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/allerta"
+                    android:layout_marginEnd="8dp" />
+
+            </RadioGroup>
+
+<!--            Categories-->
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:layout_margin="15dp"
+                android:text="Categories"
+                android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/txt_color" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <!--             Category personal-->
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <ImageView
+                        android:id="@+id/addCategoryPersonal"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:background="@drawable/category_background"
+                        android:src="@drawable/personal_icon"
+                        android:clickable="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Personal"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/txt_color"
+                        android:fontFamily="@font/allerta"/>
+
+                </LinearLayout>
+
+                <!--             Category office-->
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <ImageView
+                        android:id="@+id/addCategoryOffice"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:background="@drawable/category_background"
+                        android:src="@drawable/office"
+                        android:clickable="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Office"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/txt_color"
+                        android:fontFamily="@font/allerta"/>
+
+                </LinearLayout>
+
+                <!--             Category shopping-->
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <ImageView
+                        android:id="@+id/addCategoryShopping"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:background="@drawable/category_background"
+                        android:src="@drawable/shopping"
+                        android:clickable="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shopping"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/txt_color"
+                        android:fontFamily="@font/allerta"/>
+
+                </LinearLayout>
+
+                <!--             Category health-->
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <ImageView
+                        android:id="@+id/addCategoryHealth"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="10dp"
+                        android:background="@drawable/category_background"
+                        android:src="@drawable/hospital"
+                        android:clickable="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Health"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/txt_color"
+                        android:fontFamily="@font/allerta"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allerta"
+                    android:text="Select time"
+                    android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/txt_color" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="15dp">
+                <TextView
+                    android:id="@+id/addTaskTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biorhyme"
+                    android:textAlignment="center"
+                    android:text="12:00 AM"
+                    android:background="@drawable/category_background"
+                    android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                    android:textSize="26sp"
+                    android:textColor="@color/txt_color" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allerta"
+                    android:text="Select date"
+                    android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/txt_color" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="15dp">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addTaskDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biorhyme"
+                    android:textAlignment="center"
+                    android:text="DD-MM-YYYY"
+                    android:background="@drawable/category_background"
+                    android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                    android:textSize="26sp"
+                    android:textColor="@color/txt_color" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/themed_button_design"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allerta"
+                    android:padding="10dp"
+
+                    android:text="Description"
+                    android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/theme_color"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="#3DB3E8">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_box_design"
+                    android:inputType="textMultiLine"
+                    android:textSize="20sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addActivityCancelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="24dp"
+                    android:text="Cancel"
+                    android:clickable="true"
+                    android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/allerta"
+                    android:background="@drawable/themed_button_design"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addActivityAddButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:clickable="true"
+                    android:text="Add"
+                    android:fontFamily="@font/allerta"
+                    android:background="@drawable/themed_button_design"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                    android:textSize="22sp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

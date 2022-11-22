@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ActivityBackColor"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+        <ImageView
+            android:id="@+id/allTaskImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="@drawable/category_background"
+            android:src="@drawable/to_do_list_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/allerta"
+                android:text="All tasks"
+                android:textStyle="bold"
+                android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                android:textSize="20sp"
+                android:textColor="@color/txt_color"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/theme_color"
+            android:elevation="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/upcomingTaskToday"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:paddingStart="8dp"
+                android:text="Create a task list to make your life easy"
+                android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.258"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:src="@drawable/upcoming_task_photo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/allerta"
+            android:layout_margin="15dp"
+            android:text="Categories"
+            android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/txt_color" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+<!--             Category personal-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/personalCategory"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:background="@drawable/category_background"
+                    android:src="@drawable/personal_icon"
+                    android:clickable="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Personal"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/txt_color"
+                    android:fontFamily="@font/allerta"/>
+
+            </LinearLayout>
+
+<!--             Category Office-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/officeCategory"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:background="@drawable/category_background"
+                    android:src="@drawable/office"
+                    android:clickable="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Office"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/txt_color"
+                    android:fontFamily="@font/allerta"/>
+
+            </LinearLayout>
+
+<!--             Category shopping-->
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/shoppingCategory"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:background="@drawable/category_background"
+                    android:src="@drawable/shopping"
+                    android:clickable="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shopping"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/txt_color"
+                    android:fontFamily="@font/allerta"/>
+
+            </LinearLayout>
+
+<!--             Category Health-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/healthCategory"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:background="@drawable/category_background"
+                    android:src="@drawable/hospital"
+                    android:clickable="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/txt_color"
+                    android:fontFamily="@font/allerta"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+<!--        _______Recycler view_________-->
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+        <TextView
+            android:id="@+id/allRemainingTaskToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All tasks"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/txt_color"
+            android:fontFamily="@font/allerta"/>
+
+
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taskRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="1"
+        tools:listitem="@layout/to_do_list_recycler_shower"
+        app:layout_constraintTop_toBottomOf="@+id/container_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="5dp" />
+
+    <ImageButton
+        android:id="@+id/addTaskButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/add_button_background"
+        android:backgroundTint="@color/theme_color"
+        android:clickable="true"
+        android:src="@drawable/add_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

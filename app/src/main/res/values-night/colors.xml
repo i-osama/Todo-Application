@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="txt_color">#FFFDFD</color>
+    <color name="th_c_white">#373636</color>
+    <color name="ActivityBackColor">#505D67</color>
+    <color name="delete_btn_color">#933131</color>
+<!--    <color name="edit_text_back_color">#8AD3F4</color>-->
+
+</resources>

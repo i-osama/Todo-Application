@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStartedScreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/biorhyme"
+                android:text="To-DO Daily"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/todo"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Make your daily life easy"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color"
+                android:layout_marginTop="20dp"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Users can take advantage of ToDo Mobile Application to get a competitive edge whatever type of business they are operating."
+                android:textAlignment="center"
+                android:textColor="@color/txt_color"
+                android:layout_margin="8dp"
+                android:textSize="18sp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/flashScreenGetStartButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Get Started"
+                android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/themed_button_design"
+                android:textColor="@color/white" />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

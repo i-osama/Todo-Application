@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlashScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To-do Daily"
+            android:textStyle="bold"
+            android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+            android:textSize="28sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/biorhyme"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/theme_color"
+            android:layout_marginBottom="30dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/todo_photo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/allerta"
+            android:text="Make your life easy"
+            android:textAlignment="center"
+            android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/txt_color"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/allerta"
+            android:text="©Osama Bin Hashim"
+            android:textAlignment="center"
+            android:textAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+            android:textSize="18sp"
+            android:textColor="@color/txt_color"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
